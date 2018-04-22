@@ -12,6 +12,7 @@
 */
 
 // Route::get('/', function () {
+//     dd(123);
 //     return view('welcome');
 // });
 Route::get('/', 'PagesController@root')->name('root');
