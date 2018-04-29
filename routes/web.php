@@ -37,7 +37,7 @@ Route::post('password/email', 'Auth\ForgetPasswordController@sendResetLinkReset'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showRequest')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::resource('users', 'UsersController', ['only' => 'show', 'update', 'edit']);
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 // Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 // Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
 // Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
